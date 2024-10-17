@@ -30,7 +30,7 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3, 5, 4), 'Right', '3,5,4 is a Right triangle')
 
     def testInputs(self):
-        self.assertEqual(classifyTriangle("5", [3, 2], 4), 'InvalidInputs', '5,3,4 contains a invalid inputs')
+        self.assertEqual(classifyTriangle("5", [3, 2], 4), 'InvalidInput', '5,3,4 contains a invalid inputs')
 
     def testEquilateralTriangles(self):
         self.assertEqual(classifyTriangle(1, 1, 1), 'Equilateral', '1,1,1 should be equilateral')
