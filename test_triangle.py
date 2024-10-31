@@ -30,7 +30,8 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(3, 5, 4), 'Right', '3,5,4 is a Right triangle')
 
     def testInputs(self):
-        self.assertEqual(classifyTriangle("5", [3, 2], 4), 'InvalidInput', '5,3,4 contains a invalid inputs')
+        self.assertEqual(classifyTriangle("5", [3, 2], 4), 'InvalidInput',
+                         '5,3,4 contains a invalid inputs')
 
     def testEquilateralTriangles(self):
         self.assertEqual(classifyTriangle(1, 1, 1), 'Equilateral', '1,1,1 should be equilateral')
@@ -48,10 +49,12 @@ class TestTriangles(unittest.TestCase):
         self.assertEqual(classifyTriangle(5, 5, 6), 'Isosceles', '5,5,6 is an isosceles triangle')
 
     def testBoundsA(self):
-        self.assertEqual(classifyTriangle(200, 250, 250), 'InvalidInput', '200,250,250 is outside the bounds')
+        self.assertEqual(classifyTriangle(200, 250, 250), 'InvalidInput',
+                         '200,250,250 is outside the bounds')
 
     def testBoundsB(self):
-        self.assertEqual(classifyTriangle(-200, -250, -250), 'InvalidInput', '-200,-250,-250 is outside the bounds')
+        self.assertEqual(classifyTriangle(-200, -250, -250), 'InvalidInput',
+                         '-200,-250,-250 is outside the bounds')
 
     def testScalene(self):
         self.assertEqual(classifyTriangle(18, 28, 38), 'Scalene', '18,28,38 is a scalene triangle')
@@ -60,4 +63,3 @@ class TestTriangles(unittest.TestCase):
 if __name__ == '__main__':
     print('Running unit tests')
     unittest.main()
-
